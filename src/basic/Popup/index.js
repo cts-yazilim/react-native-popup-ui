@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image, Animated, Dimensions, Alert } from 'react-native'
 
-const WIDTH = Dimensions.get('screen').width
-const HEIGHT = Dimensions.get('screen').height
+const WIDTH = Dimensions.get('window').width
+const HEIGHT = Dimensions.get('window').height-50;
 
 class Popup extends Component {
 	static popupInstance
@@ -101,6 +101,7 @@ class Popup extends Component {
 	}
 
 	render() {
+		console.log(this);
 		const { title, type, textBody, button, buttonText, callback, background } = this.state
 		let el = null;
 		if (this.state.button) {
