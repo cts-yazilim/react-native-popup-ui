@@ -101,7 +101,7 @@ class Popup extends Component {
 	}
 
 	render() {
-		console.log(this);
+		
 		const { title, type, textBody, button, buttonText, callback, background } = this.state
 		let el = null;
 		if (this.state.button) {
